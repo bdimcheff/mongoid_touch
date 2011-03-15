@@ -7,6 +7,8 @@ require 'rspec'
 require 'mongoid'
 require 'database_cleaner'
 require 'mongoid_touch'
+require 'fabrication'
+require 'timecop'
 
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.

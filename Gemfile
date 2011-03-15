@@ -13,4 +13,6 @@ group :development do
   gem "rcov", ">= 0"
   gem "database_cleaner"
   gem "bson_ext"
+  gem "fabrication", "~> 0.9.0"
+  gem "timecop", "~> 0.3.0"
 end
