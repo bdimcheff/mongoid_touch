@@ -15,9 +15,9 @@ Jeweler::Tasks.new do |gem|
   gem.name = "mongoid_touch"
   gem.homepage = "http://github.com/bdimcheff/mongoid_touch"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
-  gem.email = "bdimchef-git@wieldim.com"
+  gem.summary = %Q{Easily track accesses to your mongoid objects}
+  gem.description = %Q{Provides a .touch method on mongoid objects that will update a timestamp so you can keep track of accesses to an object}
+  gem.email = "brandon@dimcheff.com"
   gem.authors = ["Brandon Dimcheff"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
