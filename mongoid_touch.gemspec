@@ -20,12 +20,15 @@ Gem::Specification.new do |s|
     ".document",
     ".rspec",
     "Gemfile",
+    "Gemfile.lock",
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "lib/mongoid/touch.rb",
     "lib/mongoid_touch.rb",
-    "spec/mongoid_touch_spec.rb",
+    "mongoid_touch.gemspec",
+    "spec/mongoid/touch_spec.rb",
     "spec/spec_helper.rb"
   ]
   s.homepage = %q{http://github.com/bdimcheff/mongoid_touch}
@@ -34,7 +37,7 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.6.0}
   s.summary = %q{Easily track accesses to your mongoid objects}
   s.test_files = [
-    "spec/mongoid_touch_spec.rb",
+    "spec/mongoid/touch_spec.rb",
     "spec/spec_helper.rb"
   ]
 
@@ -42,21 +45,39 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_development_dependency(%q<rspec>, ["~> 2.3.0"])
+      s.add_runtime_dependency(%q<mongoid>, ["= 2.0.0.rc.7"])
+      s.add_runtime_dependency(%q<activesupport>, ["~> 3.0.0"])
+      s.add_development_dependency(%q<rspec>, ["~> 2.5.0"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.5.2"])
       s.add_development_dependency(%q<rcov>, [">= 0"])
+      s.add_development_dependency(%q<database_cleaner>, [">= 0"])
+      s.add_development_dependency(%q<bson_ext>, [">= 0"])
+      s.add_development_dependency(%q<fabrication>, ["~> 0.9.0"])
+      s.add_development_dependency(%q<timecop>, ["~> 0.3.0"])
     else
-      s.add_dependency(%q<rspec>, ["~> 2.3.0"])
+      s.add_dependency(%q<mongoid>, ["= 2.0.0.rc.7"])
+      s.add_dependency(%q<activesupport>, ["~> 3.0.0"])
+      s.add_dependency(%q<rspec>, ["~> 2.5.0"])
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
       s.add_dependency(%q<rcov>, [">= 0"])
+      s.add_dependency(%q<database_cleaner>, [">= 0"])
+      s.add_dependency(%q<bson_ext>, [">= 0"])
+      s.add_dependency(%q<fabrication>, ["~> 0.9.0"])
+      s.add_dependency(%q<timecop>, ["~> 0.3.0"])
     end
   else
-    s.add_dependency(%q<rspec>, ["~> 2.3.0"])
+    s.add_dependency(%q<mongoid>, ["= 2.0.0.rc.7"])
+    s.add_dependency(%q<activesupport>, ["~> 3.0.0"])
+    s.add_dependency(%q<rspec>, ["~> 2.5.0"])
     s.add_dependency(%q<bundler>, ["~> 1.0.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
     s.add_dependency(%q<rcov>, [">= 0"])
+    s.add_dependency(%q<database_cleaner>, [">= 0"])
+    s.add_dependency(%q<bson_ext>, [">= 0"])
+    s.add_dependency(%q<fabrication>, ["~> 0.9.0"])
+    s.add_dependency(%q<timecop>, ["~> 0.3.0"])
   end
 end
 
