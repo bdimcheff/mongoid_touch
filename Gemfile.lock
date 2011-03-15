@@ -41,6 +41,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activesupport (~> 3.0.0)
   bson_ext
   bundler (~> 1.0.0)
   database_cleaner
