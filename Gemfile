@@ -1,7 +1,7 @@
 source "http://rubygems.org"
 # Add dependencies required to use your gem here.
 # Example:
-gem "mongoid", "2.0.0.rc.7"
+gem "mongoid", "~> 2.0.0"
 gem "activesupport", "~> 3.0.0"
 
 # Add dependencies to develop your gem here.
