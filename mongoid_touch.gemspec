@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{mongoid_touch}
-  s.version = "0.0.0"
+  s.version = "0.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Brandon Dimcheff"]
-  s.date = %q{2011-03-15}
+  s.date = %q{2011-05-12}
   s.description = %q{Provides a .touch method on mongoid objects that will update a timestamp so you can keep track of accesses to an object}
   s.email = %q{brandon@dimcheff.com}
   s.extra_rdoc_files = [
@@ -34,7 +34,7 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/bdimcheff/mongoid_touch}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.6.0}
+  s.rubygems_version = %q{1.3.7}
   s.summary = %q{Easily track accesses to your mongoid objects}
   s.test_files = [
     "spec/mongoid/touch_spec.rb",
@@ -42,10 +42,11 @@ Gem::Specification.new do |s|
   ]
 
   if s.respond_to? :specification_version then
+    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<mongoid>, ["= 2.0.0.rc.7"])
+      s.add_runtime_dependency(%q<mongoid>, ["~> 2.0.0"])
       s.add_runtime_dependency(%q<activesupport>, ["~> 3.0.0"])
       s.add_development_dependency(%q<rspec>, ["~> 2.5.0"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
@@ -56,7 +57,7 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<fabrication>, ["~> 0.9.0"])
       s.add_development_dependency(%q<timecop>, ["~> 0.3.0"])
     else
-      s.add_dependency(%q<mongoid>, ["= 2.0.0.rc.7"])
+      s.add_dependency(%q<mongoid>, ["~> 2.0.0"])
       s.add_dependency(%q<activesupport>, ["~> 3.0.0"])
       s.add_dependency(%q<rspec>, ["~> 2.5.0"])
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
@@ -68,7 +69,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<timecop>, ["~> 0.3.0"])
     end
   else
-    s.add_dependency(%q<mongoid>, ["= 2.0.0.rc.7"])
+    s.add_dependency(%q<mongoid>, ["~> 2.0.0"])
     s.add_dependency(%q<activesupport>, ["~> 3.0.0"])
     s.add_dependency(%q<rspec>, ["~> 2.5.0"])
     s.add_dependency(%q<bundler>, ["~> 1.0.0"])
